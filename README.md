@@ -2,10 +2,13 @@
 
 Poke-Controller-Modified 自作ライブラリ
 
+```
+pip install git+https://github.com/novast1024/pokelib
+```
+
 使い方
 
 import文
-
 ```
 from pokelib import default
 from pokelib.combo import *
