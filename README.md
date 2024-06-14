@@ -1,4 +1,4 @@
-# poke-con-lib
+# Poke-Controller-Modified Library
 
 Poke-Controller-Modified 自作ライブラリ
 
