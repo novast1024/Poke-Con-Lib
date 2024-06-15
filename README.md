@@ -1,16 +1,11 @@
-# Poke-Controller-Modified Library
-
 Poke-Controller-Modified 自作ライブラリ
-
-```
-pip install git+https://github.com/novast1024/pokelib
-```
-
+---
 使い方
 
 import文
+
 ```
-from pokelib import default
+from pokelib import settings
 from pokelib.combo import *
 from pokelib.button import *
 from pokelib.hatswitch import *
@@ -20,9 +15,9 @@ import pokelib.rightstick as rs
 
 初期化ブロック
 ```
-default.python_command = self
-default.input_seconds = 0.05
-default.minimum_interval = 0.05
+settings.python_command = self
+settings.input_seconds = 0.05
+settings.minimum_interval = 0.05
 ```
 
 コマンド例
@@ -38,7 +33,7 @@ send(Hold(ls.Up() + ls.Right()), A(), A(), A()) # 左スティックを右上に
 ```
 from Commands.PythonCommandBase import PythonCommand, ImageProcPythonCommand
 
-from pokelib import default
+from pokelib import settings
 from pokelib.combo import *
 from pokelib.button import *
 from pokelib.hatswitch import *
@@ -50,9 +45,9 @@ class Kurukuru(ImageProcPythonCommand):
     NAME = "クルクルテスト"
 
     def do(self):
-        default.python_command = self
-        default.input_seconds = 0.033
-        default.minimum_interval = 0.0
+        settings.python_command = self
+        settings.input_seconds = 0.033
+        settings.minimum_interval = 0.0
         c = Combo()
         c.parse(
             [
