@@ -1,10 +1,11 @@
-Poke-Controller-Modified 自作ライブラリ
----
+## Poke-Controller-Modified 自作ライブラリ
+
+
 ```
 pip install git+https://github.com/novast1024/pokelib
 ```
 
-使い方
+#### 使い方
 
 import文
 
@@ -39,10 +40,10 @@ from Commands.PythonCommandBase import PythonCommand, ImageProcPythonCommand
 
 from pokelib import settings
 from pokelib.combo import *
-from pokelib.button import *
-from pokelib.hatswitch import *
+# from pokelib.button import *
+# from pokelib.hatswitch import *
 import pokelib.leftstick as ls
-import pokelib.rightstick as rs
+# import pokelib.rightstick as rs
 
 
 class Kurukuru(ImageProcPythonCommand):
