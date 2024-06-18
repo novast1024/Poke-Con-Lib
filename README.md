@@ -39,7 +39,7 @@ send(Hold(ls.Up() + ls.Right()), A(), A(), A()) # 左スティックを右上に
 from Commands.PythonCommandBase import PythonCommand, ImageProcPythonCommand
 
 from pokelib import settings
-from pokelib.combo import *
+from pokelib.combo import send
 # from pokelib.button import *
 # from pokelib.hatswitch import *
 import pokelib.leftstick as ls
@@ -53,26 +53,12 @@ class Kurukuru(ImageProcPythonCommand):
         settings.python_command = self
         settings.input_seconds = 0.033
         settings.minimum_interval = 0.0
-        c = Combo()
-        c.parse(
+        send(
             [
-                ls.N(),
-                ls.NNE(),
-                ls.NE(),
-                ls.ENE(),
-                ls.E(),
-                ls.ESE(),
-                ls.SE(),
-                ls.SSE(),
-                ls.S(),
-                ls.SSW(),
-                ls.SW(),
-                ls.WSW(),
-                ls.W(),
-                ls.WNW(),
-                ls.NW(),
-                ls.NNW()
+                ls.N(), ls.NNE(), ls.NE(), ls.ENE(),
+                ls.E(), ls.ESE(), ls.SE(), ls.SSE(),
+                ls.S(), ls.SSW(), ls.SW(), ls.WSW(),
+                ls.W(), ls.WNW(), ls.NW(), ls.NNW()
             ] * 20
         )
-        c.send()
 ```
