@@ -11,7 +11,7 @@ import文
 
 ```
 from pokelib import settings
-from pokelib.combo import *
+from pokelib.combo import send
 from pokelib.button import *
 from pokelib.hatswitch import *
 import pokelib.leftstick as ls
