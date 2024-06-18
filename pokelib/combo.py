@@ -1,5 +1,6 @@
 from dataclasses import dataclass
 from typing import Iterable
+from functools import singledispatch
 import time
 
 from .input import GamepadInput
@@ -55,7 +56,12 @@ class Combo:
             time.sleep(i.seconds)
         settings.python_command.checkIfAlive()
 
-def send(*args):
+@singledispatch
+def send(iter: Iterable[GamepadInput | int | float]):
     c = Combo()
-    c.parse(args)
+    c.parse(iter)
     c.send()
+
+@send.register
+def _send(*args: GamepadInput | int | float):
+    send(args)
